@@ -8,7 +8,9 @@ function chkName(){
 	console.log(checkName);
 	let checkNameArray = checkName.split('');
 	console.log(checkNameArray);
+
 	// Validate!
+
 	if (checkNameArray.length == 0)
 	{
 	    let text = "The name format is invalid";
@@ -23,6 +25,20 @@ function chkName(){
     	document.getElementById("checkIfNameOk").innerHTML = text;
     	// document.getElementById("job_name").value = "";
  	}
+
+	//One last check using for loop
+	for (let a = 0; a < checkNameArray.length; a++){
+		if (checkValidStringName(checkNameArray[a]) || checkNameArray[a] == " "){
+			let text = "The name format is valid";
+    	document.getElementById("checkIfNameOk").innerHTML = text;
+		}
+		else {
+			console.log("Should be invalid");
+			text = "Your name " + checkName + " contains invalid characters. Please change it";
+    	document.getElementById("checkIfNameOk").innerHTML = text;
+			return;
+		}
+	}
 }
 
 
@@ -55,6 +71,15 @@ function chkEmail(){
      	else {
        		text = "The E-mail format is valid";
         	document.getElementById("checkIfEmailOk").innerHTML = text;
+
+					//Check that final username for the email format is still valid
+          for(let b = 0; b < userNameArray.length; b++){
+            if (checkValidStringUsername(userNameArray[b]) == false) {
+              let warning = "The username format still contains invalid characters";
+              document.getElementById("checkIfEmailOk").innerHTML = warning;
+              return;
+            }
+          }
 
         	//Now Check the domain's address extension.
        		//Can only be up to 2 or 4 extensions
