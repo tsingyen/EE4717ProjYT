@@ -1,11 +1,11 @@
 // // set value of 0 for the Subtotals
 // function init(){
 //     document.getElementById("JustJavaSubtotal").value = (0).toFixed(2); // set to 2dp
-// 
+//
 //     document.getElementById("LaitSubtotal").value = (0).toFixed(2); // set to 2dp
-//     
-//     document.getElementById("CappSubtotal").value = (0).toFixed(2); // set to 2dp 
-//     
+//
+//     document.getElementById("CappSubtotal").value = (0).toFixed(2); // set to 2dp
+//
 //     var currentDate = new Date();
 //     var currentMonth =  currentDate.getMonth() + 1;
 //     document.getElementById("orderdate").value = currentDate.getFullYear() + "-" + currentMonth + "-" + currentDate.getDate(); // set current date to be order date
@@ -13,7 +13,7 @@
 
 
 // Resets Qty and Subtotal values (when user inputs negative and/or decimal quantity)
-function resetValues(qty,subtotal){ 
+function resetValues(qty,subtotal){
     qty.value = 0;
     subtotal.value = (0).toFixed(2);
     //subtotal.innerHTML = "Subtotal\n" + "$0.00";
@@ -38,10 +38,10 @@ function calcJustJava(){
         return;
     }
     var val = Number(input.value);
-    
-    if (Number.isInteger(val) && val >= 0){
+
+    if (Number.isInteger(val) && val >= 1){
         output.value = (val*2).toFixed(2); // set to 2dp
-        //output.innerHTML = "Subtotal\n" + "$" + (output.value).toFixed(2);  
+        //output.innerHTML = "Subtotal\n" + "$" + (output.value).toFixed(2);
     }
     else {
         alert("Please only input integer values from 0 onwards!");
@@ -62,11 +62,11 @@ function calcLait(){
     if (Number.isInteger(val) && val >= 0){
         if (document.getElementById("SingleLait").checked){
             output.value = (val*2).toFixed(2); // set to 2dp
-            //output.innerHTML = "Subtotal\n" + "$" + (output.value).toFixed(2);  
+            //output.innerHTML = "Subtotal\n" + "$" + (output.value).toFixed(2);
         }
         else if (document.getElementById("DoubleLait").checked){
             output.value = (val*3).toFixed(2); // set to 2dp
-            //output.innerHTML = "Subtotal\n" + "$" + (output.value).toFixed(2);  
+            //output.innerHTML = "Subtotal\n" + "$" + (output.value).toFixed(2);
         }
         else {
             alert("Please choose either single or double shot for Cafe au Lait!");
@@ -92,11 +92,11 @@ function calcCapp(){
     if (Number.isInteger(val) && val >= 0){
         if (document.getElementById("SingleCapp").checked){
             output.value = (val*4.75).toFixed(2); // set to 2dp
-            //output.innerHTML = "Subtotal\n" + "$" + (output.value).toFixed(2);  
+            //output.innerHTML = "Subtotal\n" + "$" + (output.value).toFixed(2);
         }
         else if (document.getElementById("DoubleCapp").checked){
             output.value = (val*5.75).toFixed(2); // set to 2dp
-            //output.innerHTML = "Subtotal\n" + "$" + (output.value).toFixed(2);  
+            //output.innerHTML = "Subtotal\n" + "$" + (output.value).toFixed(2);
         }
         else {
             alert("Please choose either single or double shot for Iced Cappuccino!");
@@ -116,7 +116,7 @@ function calcCapp(){
 //     var LaitSubtotal = document.getElementById("LaitSubtotal");
 //     var CappSubtotal = document.getElementById("CappSubtotal");
 //     document.getElementById("GrandTotal").value = (Number(JustJavaSubtotal.value) + Number(LaitSubtotal.value) + Number(CappSubtotal.value)).toFixed(2);  // set to 2dp
-// 
+//
 // }
 
 
@@ -124,12 +124,10 @@ function grandtotal(){
     let JustJavaPrice = calcJustJava();
     let JustLaitPrice = calcLait();
     let JustCappPrice = calcCapp();
-    GrandTotal = Number(JustJavaPrice) + Number(JustLaitPrice) + Number(JustCappPrice); 
+    GrandTotal = Number(JustJavaPrice) + Number(JustLaitPrice) + Number(JustCappPrice);
     console.log(JustJavaPrice);
     console.log(JustLaitPrice);
     console.log(JustCappPrice);
     console.log(GrandTotal);
     document.getElementById("GrandTotal").value  = GrandTotal;
-} 
-   
-    
+}
