@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Menu</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="mystyle.css"> 
+<style>
+table { margin: auto;
+		border-style:none;
+		width: 650px;
+		border-spacing: 1;
+}
+td,th { padding: 5px;
+		font-family: Verdana, sans-serif;
+		border-style: none;
+}
+tr:nth-of-type(odd) { background-color: #d3b58c;
+						color: #2d0000;
+}
+.drinkname { text-align: center;
+}
+</style> 
+<script type="text/javascript" src="price_calc.js"></script>
+</head>
+<body>
+<div id="wrapper">
+  <header>
+    <h1><img src="javajambanner.png" alt="JavaJam Coffee House" width="830" height="106"></h1>
+  </header>
+  <div id="leftcolumn">
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="music.html">Music</a>
+      <a href="jobs.html">Jobs</a>
+	</nav>
+  </div>
+  <div id="rightcolumn">
+  <div class="content"> 
+  	<h2>Coffee at JavaJam</h2>
+  	
+  	<!--<form action="order_submit.php" method="post">-->
+  	<form >
+  	
+  	<table border="0"> 
+	<tr> <th class="drinkname">Just Java</th> 
+	<td>Regular house blend, decaffeinated, or flavor of the day. <br> <strong>Endless Cup $2.00 </strong></td> 
+	<td align="center"><input type="number" id="JustJavaQty" name="JustJavaQty" style="width: 60px"  min="0" ></td> 
+	<td align="center"><input type="number"  id="JustJavaSubtotal" name="JustJavaSubtotal" style="width: 60px"></td> 
+	</tr> 
+	
+	<tr> <th class="drinkname">Cafe au Lait</th> 
+	<td>House blended coffee infused into a smooth, steamed milk.<br> <label> <input type="radio" id="SingleLait" name="LaitOption" value="1"/> <strong>Single $2.00</strong></label> <br> <label> <input type="radio" id="DoubleLait" name="LaitOption" value="2"/> <strong> Double $3.00</strong></label> </td>  
+	<td align="center"><input type="number" id="LaitQty" name="LaitQty" style="width: 60px"  min="0" ></td>
+	<td align="center"><input type="number" id="LaitSubtotal" name="LaitSubtotal" style="width: 60px"></td> 
+	</tr>
+	 
+	<tr> <th class="drinkname">Iced Cappuccino</th> 
+	<td>Sweetened espresso blended with icy-cold milk and served in a chilled glass.<br> <label> <input type="radio" id="SingleCapp" name="CappOption" value="3"/><strong>Single $4.75 </strong> </label> <br><label> <input type="radio" id="DoubleCapp" name="CappOption" value="4"/><strong>Double $5.75</strong> </label> </td> 
+	<td align="center"><input type="number" id="CappQty" name="CappQty" style="width: 60px" min="0" ></td>
+	<td align="center"><input type="number" id="CappSubtotal" name="CappSubtotal" style="width: 60px" ></td> 
+	</tr>
+	
+	<tr>
+	<td colspan="2" align="center"> <input type="button" value="Submit Order" onclick="grandtotal()"> <input type="reset"> </td>
+	<td align="centre">Total price($)</td>
+	<td align="centre"> <input type="number" id="GrandTotal" name="GrandTotal" id="GrandTotal" style="width: 80px" readonly> </td>
+	</tr> 
+	</table>
+  </div>
+  </div>
+ <footer>Copyright &copy; 2014 JavaJam Coffee House <br> <a href="tsingyen@lim.com">tsingyen@lim.com
+ </footer>
+</div>
+</body>
+</html>
+
