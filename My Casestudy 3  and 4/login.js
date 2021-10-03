@@ -105,20 +105,20 @@ function chkEmail(){
     }
   }
 }
-	
-	
-	
+
+
+
 function chkDate(){
 	// Get today's date
 	let today = new Date();
 	let tomorrow = new Date();
-	
+
     tomorrow.setDate(today.getDate() + 1);
     tomorrow = tomorrow.toISOString().slice(0, 10);
     console.log(tomorrow);
-	
+
     dateElement = document.getElementById("date");
-	dateElement.min = tomorrow;	
+	dateElement.min = tomorrow;
 }
 
 chkDate();
