@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Menu</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="mystyle.css">
+<style>
+form { font-size: 13px;
+	 width: 350px; 
+	 padding-left: 20px;
+}
+label {float: left;
+		clear: left;
+		display: block;
+	    width: 110px; 
+	    text-align: right; 
+	    padding-right: 10px;
+	    margin-bottom: 10px;
+}
+input, textarea { margin-top: 10px; 
+                  display: block;
+                                  
+}
+
+</style>
+</head>
+<body>
+<div id="wrapper">
+  <header>
+    <h1><img src="javajambanner.png" alt="JavaJam Coffee House" width="830" height="106"></h1>
+  </header>
+  <div id="leftcolumn">
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="music.html">Music</a>
+      <a href="jobs.html">Jobs</a>
+	</nav>
+  </div>
+  <div id="rightcolumn">
+  <div class="content"> 
+  	<h2>Jobs at JavaJam</h2>
+  	<a>Want to work at JavaJam? Fill out the form below to start your application. Required fields are marked with an asterisk *</a> <br><br>
+  	<form method="post" id="loginForm">
+  	<div>
+  	<label for="name">*Name:</label>
+  	<input type="text" name="name" id="name" placeholder="Enter your name here" oninput="chkName()" onblur ="chkName()" required>
+  	<p id = "checkIfNameOk"></p>
+  	</div>
+  	
+  	<div>
+  	<label for="email">*E-mail:</label>
+  	<input type="text" name="email" id="email" placeholder="Enter your Email-ID here" oninput="chkEmail()" onblur ="chkEmail()" required>
+  	<p id = "checkIfEmailOk"></p>
+  	</div>
+  	
+  	<div>
+  	<label for="date">Start Date:</label>
+  	<input type="date" name="date" id="date" required>
+  	</div>
+	<div>
+  	<label  style="vertical-align: top"; for="experience";>*Experience:</label>
+  	<textarea name="experience" id="experience" rows="4" cols="40" required  placeholder="Enter your your past experience here"></textarea>
+  	</div>
+  	<div>
+  	<input type="reset" value="Clear"><input type="submit" value="Apply Now"> </div>
+	</form>
+
+  </div>
+  </div>
+ <footer>Copyright &copy; 2014 JavaJam Coffee House <br> <a href="tsingyen@lim.com">tsingyen@lim.com
+ <script type="text/javascript" src="login.js"></script>
+ </footer>
+</div>
+</body>
+</html>
