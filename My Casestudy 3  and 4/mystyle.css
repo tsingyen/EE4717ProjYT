@@ -1,38 +1,50 @@
+h1 {
+  text-align: center;
+  background-color: #d1b38e;
+  margin: 0px;
+}
+
+img {
+  margin: auto;
+}
+
 body {font-family: Verdana, Arial, sans-serif;
       background-color: #ede1ad;
       font-size: 15px;
       color: #2d0000;
 }
-#wrapper { 
+#wrapper {
 			width: 80%;
-		   margin: auto;
-           min-width: 850px;
-           box-shadow: 5px 10px 8px;
-           color: #421813;
-} 
-#leftcolumn { 
+		  margin: auto;
+      min-width: 800px;
+      box-shadow: 5px 10px 8px;
+      color: #421813;
+}
+
+#leftcolumn {
 			float: left;
-	          width: 170px;
-	          background-color: #e2d1b2;
-} 
+	    width: 170px;
+	    background-color: #e2d1b2;
+}
+
 nav {
   /* padding: 20px 50px 60px 50px; */
   text-align: center;
   margin: 25px;
 }
 #rightcolumn {margin-left: 170px;
-			background-color: #f5f5dd; 
-} 
+			background-color: #f5f5dd;
+}
 header{ background-color: #d3b58c;
         color: #00005D;
-        font-size: 150%; 
-        padding: 10px 10px 10px 155px;
+        font-size: 150%;
+        padding: 10px 10px 10px 10px;
 }
-h2 { color: #2d0000; 
+h2 { color: #2d0000;
      font-family: Verdana, Arial, sans-serif;;
 }
-.content {padding: 20px 20px 20px 20px; 
-} 
+.content {padding: 20px 20px 20px 20px;
+}
 
 #floatleft { margin: 10px ;
             float: left;
@@ -46,23 +58,23 @@ footer { background-color: #d3b58c ;
 		 clear: right;
 		 padding-top: 20px;
 		 padding-bottom: 20px;
-}	
-footer a {color: #b88b68; 
+}
+footer a {color: #b88b68;
 }
 nav a {text-decoration: none;
 		font-weight: bold;
 		color: #b88b68 ;
 		margin: 30px;
-				
+
 }
-nav a:link { color: #795240; 
+nav a:link { color: #795240;
 }
 nav a:visited { color: #a58366;
 }
 nav a:hover, nav a:active { text-decoration: none;
                             color: #2e0000;
 }
-ul { list-style-type: none;	
+ul { list-style-type: none;
 }
 ul li:before { content: '';
 				display: inline-block;
@@ -70,8 +82,6 @@ ul li:before { content: '';
 				width: 20px;
 				background-size: 20px;
 				background-image: url("javajampoint.png");
-				background-repeat: no-repeat; 
+				background-repeat: no-repeat;
 				margin-right: 5px;
 }
-
-
