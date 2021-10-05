@@ -1,4 +1,4 @@
-// // set value of 0 for the Subtotals
+// set value of 0 for the Subtotals
 // function init(){
 //     document.getElementById("JustJavaSubtotal").value = (0).toFixed(2); // set to 2dp
 //

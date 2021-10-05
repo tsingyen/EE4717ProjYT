@@ -49,7 +49,8 @@ function chkEmail(){
  	 let emailFormatCheck = checkEmail.split('@');
   	console.log(emailFormatCheck);
   	console.log("The email length is " + emailFormatCheck.length);
-  	if (emailFormatCheck.length != 2){
+  	if (emailFormatCheck.length != 2 || checkEmail == '@'){
+
    		let warning = "You have an invalid email-format";
     	console.log("I got in here");
     	document.getElementById("checkIfEmailOk").innerHTML = warning;
