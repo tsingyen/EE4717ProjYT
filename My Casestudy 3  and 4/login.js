@@ -55,7 +55,16 @@ function chkEmail(){
     	console.log("I got in here");
     	document.getElementById("checkIfEmailOk").innerHTML = warning;
   	}
+
+		else if (emailFormatCheck[0] == ''){
+
+				let warning = "You have an invalid email-format";
+				document.getElementById("checkIfEmailOk").innerHTML = warning;
+				
+		}
+
   	else {
+
     	//proceed with the validation
     	warning = "The E-mail format is valid";
     	document.getElementById("checkIfEmailOk").innerHTML = warning;
